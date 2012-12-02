@@ -1,0 +1,54 @@
+- content_for :head do
+  %title Son of Sedonia
+#content
+  .content-header
+    .container
+      .col-left
+        .cover
+          Son of Sedonia
+      .col-right
+        %h1 Son of Sedonia
+        %h3 An indie Sci-Fi novel written, illustrated, and self-published by Ben Chaney
+        .button Buy on Amazon
+        .button-primary Free Preview
+
+  .overview.container
+    .col-left
+      %h2 Kind of like
+      .movies
+        .movie{:title => "Blade Runner"}
+          %img{:src => 'http://ia.media-imdb.com/images/M/MV5BMTkxNTQ5NTI0Ml5BMl5BanBnXkFtZTYwODgzMDc4._V1._SY317_.jpg'}
+        .movie{:title => "City of God"}
+          %img{:src => 'http://ia.media-imdb.com/images/M/MV5BMjA4ODQ3ODkzNV5BMl5BanBnXkFtZTYwOTc4NDI3._V1._SY317_.jpg'}
+        .movie{:title => "Black Hawk Down"}
+          %img{:src => 'http://ia.media-imdb.com/images/M/MV5BMTc0NTY1NjcyMV5BMl5BanBnXkFtZTcwNjk2MjAyMQ@@._V1._SY317_CR2,0,214,317_.jpg'}
+      %ul
+        %li
+          %em Environments
+          of
+          %strong Blade Runner
+        %li
+          %em Drama
+          of
+          %strong City of God
+        %li
+          %em Action
+          of
+          %strong Black Hawk Down
+      .social
+
+    .col-right
+      %h2 Summary
+      %p
+        In 2080AD Sedonia City has passed its peak, having burned through a thousand years of Helium-3 miracle fuel in less than a hundred. 40 million people swarm together inside the half-mile high Border Wall. As the citizens dwell in their promised Future, every distraction is fed by their Neurals: Social media that can be seen, heard, and touched through the signals of the human brain. But the 20 million people of the Rasalla Slums outside the Border were cut from the Future like an infected limb, falling from recession, into depression, and collapse thirty years before.
+
+      %p
+        Brothers Matteo and Jogun grew up in the scrap, ashes, and dirt of the Rasalla Slums. With their parents long gone and Matteo sick, Jogun had to step up and grab a gun for the T99 gang. Matteo is weak, but he's smart...too smart for his own good. He's asking questions about the past, and stuck on a future among the Sedonia highrises where hunger, sickness, and alienation don't exist. But Jogun believes dreams don't count for much in the war to survive...and that some answers should stay buried. Matteo, totally dependent on the food, meds, and loving protection Jogun brings, has no choice but to obey. Neither of them see the Change just over the horizon.
+
+      %p
+        Jogun's capture by the EXOs, the Sedonia paramilitary cops that police the slums, is the spark that lights the fuse. The day is coming when there will be no more fuel to keep the Future running. With Jogun and countless others enslaved to scrape for every last cubic meter, it is Matteo's turn to step up, trust in himself, and unlock a long-buried secret that reaches past the tallest skyscraper...into the stars.
+
+:javascript
+  $(function(){
+    $(".movie").tipTip({'delay': 0});
+  });
