@@ -9,6 +9,9 @@
         = yield_content :head
   %body{:class => page_classes}
     #header
+      .container
+        .right
+          %a{:href => '#author'} About the Author
     #wrap
       = yield
     #footer

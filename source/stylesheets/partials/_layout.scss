@@ -4,3 +4,8 @@ $blueprint-grid-margin: 20px;
 
 .col-left { @include column(5); }
 .col-right { @include column(7, true); }
+
+.about-the-author {
+  .text { @include column(7); }
+  .portrait { @include column(5, true);}
+}
