@@ -100,10 +100,8 @@ body {
 
 
   .kind-of-like {
-    @include box-shadow(0 2px 4px rgba(0,0,0, .15),
-                        inset 0 1px 0 rgba(255,255,255, .08),
-                        inset 0 -1px 0 rgba(255,255,255, .1));
-    background: darken(desaturate(#ddddce, 15%), 50%);
+    @include box-shadow(0 0 1px 8px rgba(0,0,0, .15));
+    background: rgba(0,0,0, .43);
     padding: 20px 0;
     margin-bottom: 40px;
 
@@ -150,6 +148,7 @@ body {
   }
 
   .about-the-author {
+    @include box-shadow(0 0 1px 8px rgba(0,0,0, .15));
     background: rgba(0,0,0, .43);
     padding: 40px 0;
     .portrait .image { @include framed; display: block; float: right; }
