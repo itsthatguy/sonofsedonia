@@ -69,8 +69,8 @@ body {
 }
 
 @mixin framed {
-  @include box-shadow(0 2px 5px rgba(0,0,0, .18));
-  border: 4px solid #fff;
+  @include box-shadow(0 2px 8px rgba(0,0,0, .55));
+  border: 4px solid #333;
 }
 
 #wrap {
@@ -108,9 +108,12 @@ body {
     margin-bottom: 40px;
 
     h2 {
+      @include border-radius(4px);
+      background: rgba(200,200,255, .08);
       display: inline-block;
       margin-right: 40px;
-      margin-top: 50px;
+      margin-top: 44px;
+      padding: 10px;
       vertical-align: top;
     }
 
@@ -131,7 +134,7 @@ body {
       &:last-child { margin: 0; }
       &:after {
         content: '+';
-        color: #aaa;
+        color: rgba(200,200,255, .12);
         font-size: 80px;
         font-weight: bold;
         position: absolute;

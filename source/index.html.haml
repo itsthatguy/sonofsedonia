@@ -18,19 +18,19 @@
     .container
       %h2 Compare to
       .movie
-        .movie-border{:title => "Blade Runner"}
+        .movie-border
           %img{:src => '/images/covers/blade-runner.jpg'}
         %p
           Environments of
           .title Blade Runner
       .movie
-        .movie-border{:title => "City of God"}
+        .movie-border
           %img{:src => '/images/covers/city-of-god.jpg'}
         %p
           Drama of
           .title City of God
       .movie
-        .movie-border{:title => "Black Hawk Down"}
+        .movie-border
           %img{:src => '/images/covers/black-hawk-down.jpg'}
         %p
           Action of
@@ -70,6 +70,6 @@
 
 
 :javascript
-  $(function(){
-    $(".movie-border").tipTip({defaultPosition: 'top', delay: 0});
-  });
+  / $(function(){
+  /   $(".movie-border").tipTip({defaultPosition: 'top', delay: 0});
+  / });
