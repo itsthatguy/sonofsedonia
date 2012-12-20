@@ -16,6 +16,8 @@ body {
   z-index: 3000;
   * { text-decoration: none; }
 
+  .left a { margin-right: 20px; }
+
   .icon-twitter, .icon-facebook {
     @include inline-block;
     color: #555;
@@ -155,3 +157,5 @@ body {
     .portrait .image { @include framed; display: block; float: right; }
   }
 }
+
+#summary { display: block; top: -100px; visibility: hidden; position: relative; }
