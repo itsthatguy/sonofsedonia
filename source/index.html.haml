@@ -12,32 +12,31 @@
         .button Buy on Amazon
         .button-primary Free Preview
 
-  .overview.container
-    .col-left
-      %h2 Kind of like
-      .movies
-        .movie{:title => "Blade Runner"}
+  .kind-of-like
+    .container
+      %h2 Compare to
+      .movie
+        .movie-border{:title => "Blade Runner"}
           %img{:src => '/images/covers/blade-runner.jpg'}
-        .movie{:title => "City of God"}
+        %p
+          Environments of
+          .title Blade Runner
+      .movie
+        .movie-border{:title => "City of God"}
           %img{:src => '/images/covers/city-of-god.jpg'}
-        .movie{:title => "Black Hawk Down"}
+        %p
+          Environments of
+          .title Blade Runner
+      .movie
+        .movie-border{:title => "Black Hawk Down"}
           %img{:src => '/images/covers/black-hawk-down.jpg'}
-      %ul
-        %li
-          %em Environments
-          of
-          %strong Blade Runner
-        %li
-          %em Drama
-          of
-          %strong City of God
-        %li
-          %em Action
-          of
-          %strong Black Hawk Down
-      .social
+        %p
+          Environments of
+          .title Blade Runner
 
-    .col-right
+  .summary
+    .container
+
       %h2 Summary
       %p
         In 2080AD Sedonia City has passed its peak, having burned through a thousand years of Helium-3 miracle fuel in less than a hundred. 40 million people swarm together inside the half-mile high Border Wall. As the citizens dwell in their promised Future, every distraction is fed by their Neurals: Social media that can be seen, heard, and touched through the signals of the human brain. But the 20 million people of the Rasalla Slums outside the Border were cut from the Future like an infected limb, falling from recession, into depression, and collapse thirty years before.
@@ -48,26 +47,27 @@
       %p
         Jogun's capture by the EXOs, the Sedonia paramilitary cops that police the slums, is the spark that lights the fuse. The day is coming when there will be no more fuel to keep the Future running. With Jogun and countless others enslaved to scrape for every last cubic meter, it is Matteo's turn to step up, trust in himself, and unlock a long-buried secret that reaches past the tallest skyscraper...into the stars.
 
-  .container.about-the-author
-    %a#author
-    .text
-      %h2 About the Author
-      %p
-        I was born in 1984 to Les and Patty Chaney, two people whose tireless encouragement, sacrifices, and love helped propel an otherwise shy, fearful boy to the fulfillment of his dreams (this book).
-      %p
-        I first found my creativity in fantasy and sci-fi artwork, beginning with simple childhood scribbles and progressing to advanced digital illustration as a young adult.  It wasn't until my enrollment in the Savannah College of Art and Design's Sequential Art department that my focus shifted, forever, to story.
-      %p
-        But my degree was in art, so as a professional, I moved into the video game industry.  A wonderful, invaluable experience, but the more I learned of the adult world (science, economics, politics, sociology, psychology, philosophy), the more I wanted to make a positive impact elsewhere.  To not only entertain, but to try and say something while doing so.
-      %p
-        This book is my very best attempt.  I hope you enjoy it. :)
+  .about-the-author
+    .container
+      %a#author
+      .text
+        %h2 About the Author
+        %p
+          I was born in 1984 to Les and Patty Chaney, two people whose tireless encouragement, sacrifices, and love helped propel an otherwise shy, fearful boy to the fulfillment of his dreams (this book).
+        %p
+          I first found my creativity in fantasy and sci-fi artwork, beginning with simple childhood scribbles and progressing to advanced digital illustration as a young adult.  It wasn't until my enrollment in the Savannah College of Art and Design's Sequential Art department that my focus shifted, forever, to story.
+        %p
+          But my degree was in art, so as a professional, I moved into the video game industry.  A wonderful, invaluable experience, but the more I learned of the adult world (science, economics, politics, sociology, psychology, philosophy), the more I wanted to make a positive impact elsewhere.  To not only entertain, but to try and say something while doing so.
+        %p
+          This book is my very best attempt.  I hope you enjoy it. :)
 
-    .portrait
-      .image
-        %img{:src => 'http://www.sonofsedonia.com/uploads/1/4/8/5/14852808/910372.jpg?309'}
+      .portrait
+        .image
+          %img{:src => 'http://www.sonofsedonia.com/uploads/1/4/8/5/14852808/910372.jpg?309'}
 
 
 
 :javascript
   $(function(){
-    $(".movie").tipTip({'delay': 0});
+    $(".movie-border").tipTip({defaultPosition: 'top', delay: 0});
   });

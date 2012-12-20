@@ -4,6 +4,13 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 /* -------------------------------------------------------------
+  Blueprint Variables
+ ------------------------------------------------------------- */
+$blueprint-grid-columns: 10;
+$blueprint-grid-width: 60px;
+$blueprint-grid-margin: 20px;
+
+/* -------------------------------------------------------------
   Compass
  ------------------------------------------------------------- */
 @import "compass/reset";
@@ -15,6 +22,7 @@
   Vendor
  ------------------------------------------------------------- */
 @import "vendor/tipTip";
+@import "vendor/font-awesome";
 
 /* -------------------------------------------------------------
   Mixins
@@ -28,7 +36,7 @@
 /* -------------------------------------------------------------
   Partials
  ------------------------------------------------------------- */
+@import "partials/fonts";
 @import "partials/base";
 @import "partials/layout";
-@import "partials/fonts";
 @import "partials/sticky-footer";

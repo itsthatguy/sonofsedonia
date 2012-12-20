@@ -1,6 +1,7 @@
 $base-font-stack: 'PT Sans','Averia Serif Libre', 'Lora', "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
 $base-font-size: 15px;
-$base-font-color: #222;
+$base-font-color: #f6f6f6;
+$base-font-weight: 100;
 $base-line-height: 26px;
 
 $link-color-normal: #50d3e7;
@@ -13,6 +14,7 @@ $link-color-focus: $link-color-normal;
   color: $base-font-color;
   // font-family: $base-font-stack;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
   line-height: $base-line-height;
 
   // font-family: 'Questrial', sans-serif;
@@ -36,18 +38,16 @@ a {
 
 
 
-h1 { color: #4ba1aa; }
-h2 { color: #4ba1aa; }
+h1, h2 { color: #f6f6f6; }
 h1, h2 { font-family: 'Caudex', serif; @include text-shadow(1px 1px 0 rgba(0,0,0, .65)); }
 
 h1 { font-size: 2.6em; line-height: 1em; margin-bottom: 10px; }
 h2 { font-size: 2em; line-height: 1em; margin-bottom: 10px; }
-h3 { font-size: 1.2em; line-height: 1.4em; margin-bottom: 10px; }
-h4 { font-size: 1.1em; }
+h3 { font-size: 1.1em; line-height: 1.4em; margin-bottom: 10px; }
+h4 { font-size: 1.05em; }
 
 // h1,h2,h3,h4 { margin-bottom: .5em; }
 
-p { margin-bottom: 10px; }
 
 em { font-style: italic; }
 strong { font-weight: 700; }
