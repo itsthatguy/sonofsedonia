@@ -4,15 +4,14 @@ $base-font-color: #f6f6f6;
 $base-font-weight: 100;
 $base-line-height: 26px;
 
-$link-color-normal: #50d3e7;
-$link-color-hover: lighten($link-color-normal, 10%);
+$link-color-normal: lighten(#2CC39E, 15%);
+$link-color-hover: lighten($link-color-normal, 20%);
 $link-color-active: $link-color-normal;
 $link-color-visited: $link-color-normal;
 $link-color-focus: $link-color-normal;
 
 @mixin base-fonts {
   color: $base-font-color;
-  // font-family: $base-font-stack;
   font-size: $base-font-size;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
@@ -34,6 +33,7 @@ a {
                        $link-color-active,
                        $link-color-visited,
                        $link-color-focus);
+  text-decoration: none;
 }
 
 
