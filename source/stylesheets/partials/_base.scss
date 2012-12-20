@@ -117,6 +117,7 @@ body {
       margin-right: 100px;
       position: relative;
 
+      p { margin: 0; }
       p .title { font-weight: bold; }
       .movie-border {
         @include framed;
