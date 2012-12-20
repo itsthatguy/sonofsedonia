@@ -75,19 +75,18 @@ body {
 
   #content {
 
-
     .content-header {
       border-left: none;
       border-right: none;
       color: #eaeaea;
-      margin: 0 0 10px;
+      margin: 0;
       padding: 20px 0 0;
 
       .cover {
         background: image-url('/images/book-cover.png') no-repeat 0 80px;
         text-indent: -200%;
         width: 400px;
-        height: 520px;
+        height: 480px;
       }
 
       .col-right {
