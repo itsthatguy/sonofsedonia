@@ -33,11 +33,44 @@ $contrasted-lightness-threshold: 50%;
   @extend .button-primary;
   @include font-awesome;
   @extend .icon-amazon;
+  height: 26px;
   &:before { margin-right: 10px; }
 }
 
+[class^='button'] a { color: #fff; }
 .button-free {
   @extend .button;
+  text-align: center;
+  width: 110px;
+  height: 26px;
+  .hovered { display: none; }
+  &:hover {
+    padding: 0;
+    width: 140px;
+    height: 46px;
+    .text { display: none; }
+    .hovered {
+      @include border-radius(4px);
+      @include background(linear-gradient(lighten(#495566, 10%), darken(#495566, 10%)));
+      display: block;
+      > * {
+        @include inline-block;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 70px;
+      }
+      .epub, .mobi {
+        &:hover { background: lighten(#495566, 30%); color: #fff; }
+      }
+      .epub {
+        @include border-radius(4px 0 0 4px);
+      }
+      .mobi {
+        @include border-radius(0 4px 4px 0);
+      }
+    }
+  }
 }
 
 .button { @include button(#495566); }
