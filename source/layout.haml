@@ -26,6 +26,17 @@
     #wrap
       = yield
     #footer
+      .container
+        .col-left
+          %h1 Son of Sedonia
+        .right
+          %a.button-amazon{:href => "http://www.amazon.com/Son-of-Sedonia-ebook/dp/B00AO5ID9Q"} Buy on Amazon
+          .button-free
+            .text Free Preview
+            .hovered>
+              %a.epub{:href => "SonofSedonia_Sample.epub"}> ePub
+              %a.mobi{:href => "SonofSedonia_Sample.mobi"}> Mobi
+
     :javascript
 
       var _gaq = _gaq || [];
