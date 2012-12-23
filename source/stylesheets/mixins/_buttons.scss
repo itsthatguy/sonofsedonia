@@ -20,7 +20,7 @@ $contrasted-lightness-threshold: 50%;
   font-size: 18px;
   font-weight: normal;
   // border: 1px solid darken($color, 20%);
-  color: contrast-color($color, #222, #efefef);
+  color: contrast-color($color, #222, #efefef) !important;
   cursor: pointer;
   &:hover {
     background: lighten($color, 10%);
@@ -29,13 +29,21 @@ $contrasted-lightness-threshold: 50%;
   }
 }
 
-.button {
-  @include button(#23997c);
+.button-amazon {
+  @extend .button-primary;
+  @include font-awesome;
+  @extend .icon-amazon;
+  &:before { margin-right: 10px; }
 }
 
-.button-primary {
-  @include button(#495566);
+.button-free {
+  @extend .button;
 }
+
+.button { @include button(#495566); }
+
+.button-primary { @include button(#23997c); }
+
 .button-success {
   @include button(#5bb75b);
   color: #fff;
