@@ -7,7 +7,7 @@
     %meta{:name => "author", :content => "Ben Chaney"}
     %a{:rel => "author", :href => "https://plus.google.com/105149306655131970414"}
     = stylesheet_link_tag "screen.css", "http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Caudex"
-    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js", "jquery.tipTip.js"
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js", "http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"
     = yield_content :head
 
   %body{:class => page_classes}
@@ -36,6 +36,8 @@
             .hovered>
               %a.epub{:href => "SonofSedonia_Sample.epub"}> ePub
               %a.mobi{:href => "SonofSedonia_Sample.mobi"}> Mobi
+    #cover-large
+      %img{:src => "/images/cover-full-res.png"}
 
     :javascript
 
@@ -58,4 +60,11 @@
           follows = json.followers_count;
           $(".icon-twitter .count").html(follows);
         });
+
+        $("img[rel]").overlay({
+          mask: {
+          color: "rgba(0,0,0, .98)"
+          }
+        });
+
       })();

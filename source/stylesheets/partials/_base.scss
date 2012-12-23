@@ -81,14 +81,12 @@ body {
       border-left: none;
       border-right: none;
       color: #eaeaea;
-      margin: 0;
+      margin: 20px 0 0;
       padding: 20px 0 0;
 
       .cover {
-        background: image-url('/images/book-cover.png') no-repeat 0 80px;
-        text-indent: -200%;
-        width: 400px;
-        height: 480px;
+        margin: 60px 0 40px;
+
       }
 
       .col-right {
@@ -164,3 +162,16 @@ body {
 #summary { display: block; top: -100px; visibility: hidden; position: relative; }
 
 #footer { padding: 40px 0; }
+
+#cover-large { display: none; }
+
+#lean_overlay {
+  position: fixed;
+  z-index:100;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+  background: #000;
+  display: none;
+}
