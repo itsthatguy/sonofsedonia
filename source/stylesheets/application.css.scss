@@ -1,0 +1,30 @@
+$font-stack-sans: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+
+$paragraph-font-size: .9em;
+
+$body-font-family: $font-stack-sans;
+$header-font-family: $font-stack-sans;
+
+$body-font-weight: normal;
+$header-font-weight: normal;
+
+$body-font-color: #333;
+$header-font-color: #333;
+
+$body-bg: #f6f6f6;
+
+
+$topbar-bg: #333;
+$topbar-height: 45px;
+$topbar-margin-bottom: 0;
+
+@import "foundation";
+
+#about, #reviews { padding-top: $topbar-height; margin-top: -$topbar-height; }
+
+body {
+}
+
+#overview {
+  background: #666;
+}
