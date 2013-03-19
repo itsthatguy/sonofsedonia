@@ -1,30 +1,186 @@
-$font-stack-sans: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 
-$paragraph-font-size: .9em;
+/* COLORS */
+$white                  : rgb(255,255,255);
+$black                  : rgb(45,48,50);
 
-$body-font-family: $font-stack-sans;
-$header-font-family: $font-stack-sans;
+$primary-color          : #25c6e2;
+$secondary-color        : #e9e9e9;
+$third-color            : lighten($black, 20%);
+$alert-color            : #c60f13;
+$success-color          : #d0653a;
 
-$body-font-weight: normal;
-$header-font-weight: normal;
+/* GENERIC FONTS */
+$font-stack-sans        : 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
 
-$body-font-color: #333;
-$header-font-color: #333;
+$paragraph-font-size    : .9em;
 
-$body-bg: #f6f6f6;
+$body-font-family       : $font-stack-sans;
+$header-font-family     : 'lato', $font-stack-sans;
 
+$body-font-weight       : normal;
+$header-font-weight     : bold;
 
-$topbar-bg: #333;
-$topbar-height: 45px;
-$topbar-margin-bottom: 0;
+$body-font-color        : rgb(102,108,112);
+$panel-font-color       : $body-font-color;
+$header-font-color      : $black;
+
+$body-bg                : #ffffff;
+
+/* TOPBAR */
+$topbar-bg              : $black;
+$topbar-dropdown-bg     : $black;
+$topbar-height          : 55px;
+
+/* Controlling the styles for the title in the top bar */
+$topbar-title-weight    : 600;
+$topbar-title-font-size : 26px;
+
+$topbar-link-font-size  : emCalc(18px);
+$topbar-margin-bottom   : 0;
+$topbar-breakpoint      : 768px;
+
+/* REVEAL */
+$reveal-modal-bg        : transparent;
+$reveal-modal-padding   : emCalc(20px);
+$reveal-box-shadow      : none;
+$reveal-border-style    : none;
+
+$global-radius: 4px;
+
 
 @import "foundation";
+@import "compass/css3";
+@import "vendor/font-awesome";
 
 #about, #reviews { padding-top: $topbar-height; margin-top: -$topbar-height; }
-
+* { @include text-shadow(0 1px 0 rgba(0,0,0,.12)); }
 body {
 }
+#header .columns { padding: 0; }
 
-#overview {
-  background: #666;
+#header,
+.black-bg {
+  background-color: $black;
+  height: emCalc(55px);
+}
+
+.top-bar .title-area li.name {
+  i:before {
+    color: $success-color;
+    height: 34px;
+    font-size: 32px;
+  }
+  a { @include inline-block; height: 30px; vertical-align: top; }
+}
+
+.top-bar h1 a { overflow: visible; text-overflow: visible; white-space: nowrap; }
+
+.top-bar .button {
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.top-bar-section li a:not(.button) {
+  &, &:hover { background: transparent; }
+  &:hover {
+    background: transparent;
+    color: $primary-color;
+    @include transition(color .2s linear);
+  }
+}
+
+#wrap {
+  section {
+    padding-top: emCalc(24px);
+    padding-bottom: emCalc(24px);
+    margin-top: emCalc(24px);
+    margin-bottom: emCalc(24px);
+  }
+
+
+  #overview {
+    // @include background(linear-gradient(top, $black, lighten($black, 20%)));
+    background-color: $black;
+    margin-top: 0;
+    margin-top: 0;
+    color: $body-bg;
+    padding-top: emCalc(42px);
+    // background-image: image-url('background4.jpg');
+    // background-position: left top;
+    h1, h2, h3, h4, h5 { color: $secondary-color; }
+
+    h1 { margin-bottom: 0; }
+
+  }
+}
+
+#cover-large {
+  pointer-events: none;
+  overflow: visible;
+  text-align: center;
+}
+#cover-large img {
+  @include box-shadow(0 0 10px rgba(#000, .4));
+  border: 10px solid #f6f6f6;
+  max-height: 80%;
+}
+
+.button { @include background(linear-gradient(top, lighten($primary-color, 10%), $primary-color)); }
+
+section.light-section {
+  // @include box-shadow(inset 0 6px 6px -4px rgba(0,0,0, .06),
+  //                     inset 0 -6px 6px -4px rgba(0,0,0, .06));
+  background-color: $secondary-color;
+  // &, & h1, & h2, & h3, & h4, & h5, & p { color: $white; }
+}
+
+.author-image {
+  @include box-shadow(0 2px 3px 1px rgba(0,0,0, .25));
+  border: 6px solid $white;
+}
+
+h3 {
+  color: $alert-color;
+  font-weight: 300;
+}
+
+h4 {
+  font-family: 'lato';
+  font-weight: 300;
+}
+
+.primary { color: $primary-color; }
+.secondary { color: $secondary-color; }
+.third { color: $third-color; }
+.alert { color: $alert-color; }
+.success { color: $success-color; }
+
+cite {
+  color: #999999;
+  display: block;
+  &:before { content: '\2014 \00A0'; }
+}
+
+.kind-of-like {
+  margin-top: 42px;
+  text-align: center;
+
+  h5 { color: $third-color; }
+  .movie {
+    @include inline-block;
+    margin-right: 24px;
+    position: relative;
+
+    p { margin: 0; }
+    p .title { font-weight: bold; }
+
+    img {
+      @include box-shadow(0 2px 8px rgba(0,0,0, .55));
+      border: 4px solid $white;
+      margin-bottom: 16px;
+      // width: 78px;
+    }
+    &:last-child { margin: 0; }
+  }
 }

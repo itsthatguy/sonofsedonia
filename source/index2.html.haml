@@ -2,75 +2,126 @@
 layout: layout2
 ---
 
-#overview
+%section#overview
   .row
     .large-12.columns
       .row
         .large-6.columns
-          %img(src="/images/book-cover.png" width="100%" style="max-width: 435px;")
+          %a(href="#" data-reveal-id="cover-large")
+            %img(src="/images/book-cover.png" width="100%" style="max-width: 435px;")
         .large-6.columns
+          %h1 Son of Sedonia
+          %h4
+            Scenester fixie banksy carles fingerstache wolf, <span class="success">irony banjo semiotics</span>.  Odd future cliche plaid, williamsburg cardigan try-hard dreamcatcher brooklyn high life flannel.
           :markdown
-            An indie Sci-Fi novel written, illustrated, and self-published by Ben Chaney
+            An indie Sci-Fi novel written, illustrated, and self-published by <a href="#author">Ben Chaney</a>
           .row
             .large-8.columns
-              %a.button.radius.expand Buy on Amazon
+              %a.button.radius.expand
+                %i.icon-amazon
+                Buy on Amazon
               %br/
-              =link_to "Download Free Preview", "#"
+              %a.third(href="#")
+                %i.icon-download-alt
+                Download Free Preview
 
-#about
+%section
+  #about
+    .row
+      .large-12.columns
+        %h2 Summary
+        :markdown
+          Imagine growing up in the largest slum on the planet in the year 2080AD. Twenty million people are your neighbors, huddled together in an ocean of rusted dwellings made from whatever Sedonia City, the towering metropolis in the distance, decides to throw away. Gang members, known as the T99s, are the heads of your community: smuggling tech, trafficking drugs, and fighting a constant guerilla war with the City’s bio-augmented EXO police force. There is little hope for survival. None for escape to a better life beyond the half-mile high Border between city and slum. This is Matteo’s world. A bright kid, but sick and weak since childhood, he is painfully dependent on Jogun: loving older brother, and hardened soldier for the T99s. When a luxury transport from Sedonia’s aerial traffic crash-lands in Rasalla, it threatens to change Matteo and Jogun’s fate forever. And all fates are connected.
+
+          The Dwellers of Rasalla, bound by family in the scrap, ashes, and dirt.
+
+          The Citizens of Sedonia, oblivious to danger in the buzzing twilight of the Neuro-Social Revolution.
+
+          The EXOs, placing themselves in harm’s way to perform their duty to protect their homes and fellow officers.
+
+          And the Ruling Elite, whose long-buried secrets and desperate plans could spell the end of civilization...or a new beginning.
+
+          Son of Sedonia is an action-filled science fiction epic with a soul and a clear message. Its characters live, breathe, suffer, and love in their different worlds, each brought to the brink as the Third-World collides with the First. Their future could well be ours.
+
+%section.light-section
   .row
     .large-12.columns
-      %h2 Summary
-      :markdown
-        Imagine growing up in the largest slum on the planet in the year 2080AD. Twenty million people are your neighbors, huddled together in an ocean of rusted dwellings made from whatever Sedonia City, the towering metropolis in the distance, decides to throw away. Gang members, known as the T99s, are the heads of your community: smuggling tech, trafficking drugs, and fighting a constant guerilla war with the City’s bio-augmented EXO police force. There is little hope for survival. None for escape to a better life beyond the half-mile high Border between city and slum. This is Matteo’s world. A bright kid, but sick and weak since childhood, he is painfully dependent on Jogun: loving older brother, and hardened soldier for the T99s. When a luxury transport from Sedonia’s aerial traffic crash-lands in Rasalla, it threatens to change Matteo and Jogun’s fate forever. And all fates are connected.
+      %h2 Inspired by
+      %h4.third Pour-over cosby sweater flexitarian, helvetica pitchfork art party selfies vinyl ethnic ethical plaid odd future.  Odd future ugh flexitarian, echo park occupy beard bushwick hashtag selfies pitchfork flannel.  Scenester fanny pack fixie direct trade  thundercats.  Chambray master cleanse gluten-free, ethical lo-fi chillwave wolf deep v pug.
+      .kind-of-like
+        .movie
+          %img{:src => '/images/covers/blade-runner.jpg'}
+          %h4
+            Environments of
+            .title Blade Runner
+        .movie
+          %img{:src => '/images/covers/city-of-god.jpg'}
+          %h4
+            Drama of
+            .title City of God
+        .movie
+          %img{:src => '/images/covers/black-hawk-down.jpg'}
+          %h4
+            Action of
+            .title Black Hawk Down
 
-        The Dwellers of Rasalla, bound by family in the scrap, ashes, and dirt.
-
-        The Citizens of Sedonia, oblivious to danger in the buzzing twilight of the Neuro-Social Revolution.
-
-        The EXOs, placing themselves in harm’s way to perform their duty to protect their homes and fellow officers.
-
-        And the Ruling Elite, whose long-buried secrets and desperate plans could spell the end of civilization...or a new beginning.
-
-        Son of Sedonia is an action-filled science fiction epic with a soul and a clear message. Its characters live, breathe, suffer, and love in their different worlds, each brought to the brink as the Third-World collides with the First. Their future could well be ours.
-  .row
-    .large-12.columns
-      %h2 From the Author
-      .row
-        .large-4.columns
-          %img(src="/images/ben-chaney.jpg")
-        .large-8.columns
-          .panel
+%section
+  #reviews
+    .row
+      .large-12.columns
+        %h2 People love this book!
+        .row
+          .large-6.columns
+            %h3 Hooked from the beginning!
             :markdown
-              Hi, I'm Ben Chaney. I grew up with a passion for SciFi and Fantasy that led him to study visual storytelling and illustration at the Savannah College of Art and Design. After graduation, he worked his way up through the video game industry; QA testing at Epic Games and Redstorm Entertainment, game art production at Schell Games in Pittsburgh, Pennsylvania, then art direction at Villain LLC in Cary, North Carolina.
+              > I'm not a big sci-fi reader but this story had me hooked as soon as I started reading. Matteo won my heart
+              > from the beginning & in spite of his weaknesses he is a brave little boy. He & his older brother, Jogun are
+              > surviving on their own the the slums facing hunger, and the brutal environment outside Sedonia City. I had
+              > a hard time putting this book down once I started reading. <cite class="comment-author">Jaycare</cite>
+          .large-6.columns
+            %h3 An absolute page turner!
+            :markdown
+              > Once I started Son of Sedonia I could not put it down! The characters are well developed, the plot and story
+              > line are exceptional, the action will keep you on your toes, and the last line of the book gave me chills.
+              > A must read, even for those not usually interested in "sci-fi"! Son of Sedonia. *<cite class="comment-author">MCG</cite>*
+        .row
+          .large-12.columns
+            %h3 Absolutely Amazing Book
+            :markdown
+              > I have read the other reviews and agree with all of them. I read a wide variety of books from classics to
+              > best sellers to science fiction to murder mysteries and everything in between. This book is an outstanding
+              > read regardless of whether you are into science fiction.
+              >
+              > The character development, plot and creative writing are exceptional. What really sets this book apart is
+              > that you never get what you expect. The twists and turns exceed any mystery I have ever read. Sir Arthur
+              > Conan Doyle would be proud of Son of Sedonia's unpredictabilty. Isaac Asimov would be enthralled by the
+              > futuristic picture the author paints and how the reader can see it so vividly.
+              >
+              > Another fantastic feature is the book's complexity. The science fiction setting and the technology is just
+              > part of that complexity. Its the multiple characters and the parts they play, the scene changes and their
+              > coloring, and most of all, the intricately woven story that pulls everything together even tho at times you
+              > wonder where is a particular part playing in the whole scheme. And the ending....
+              >
+              > Please read this book! It is quite possibly the best book I have read in at least 10 years. My only wish is
+              > if there was a way to get these reviews read by many more people so they will read it and have the
+              > opportunity to be mesmerized. I will try social media outlets but this needs someone in big book review
+              > shoes to put the word out. <cite class="comment-author">Kari A. Newquist</cite>
 
-              But storytelling had taken a hold of him at SCAD, and manifested in a pet writing project. Often neglected or pushed aside for other things, “Son of Sedonia” grew slowly over six years. Somehow, the image of the boy on the slum rooftop endured. As Ben honed his craft, the world changed. America plunged into recession, political discord, and uncertainty, triggering a desire for information the likes of which Ben hadn’t before experienced. His writing, and this book, matured as he did.
+%section.light-section
+  #author
+    .row
+      .large-12.columns
+        %h2 From the Author
+        .row
+          .large-4.columns
+            %img.author-image(src="/images/ben-chaney.jpg")
+          .large-8.columns
+            .panel.radius
+              :markdown
+                Hi, I'm Ben Chaney. I grew up with a passion for SciFi and Fantasy that led him to study visual storytelling and illustration at the Savannah College of Art and Design. After graduation, he worked his way up through the video game industry; QA testing at Epic Games and Redstorm Entertainment, game art production at Schell Games in Pittsburgh, Pennsylvania, then art direction at Villain LLC in Cary, North Carolina.
 
-              Video game development had given Ben the confidence in his abilities. What to do with those abilities became impossible to ignore. That and the ceaseless, loving voices around him, all saying the same thing: “Follow your heart.” In June 2012, Ben quit his successful job in game development to do just that.
+                But storytelling had taken a hold of him at SCAD, and manifested in a pet writing project. Often neglected or pushed aside for other things, “Son of Sedonia” grew slowly over six years. Somehow, the image of the boy on the slum rooftop endured. As Ben honed his craft, the world changed. America plunged into recession, political discord, and uncertainty, triggering a desire for information the likes of which Ben hadn’t before experienced. His writing, and this book, matured as he did.
 
-              This book is the result.
+                Video game development had given Ben the confidence in his abilities. What to do with those abilities became impossible to ignore. That and the ceaseless, loving voices around him, all saying the same thing: “Follow your heart.” In June 2012, Ben quit his successful job in game development to do just that.
 
-#reviews
-  .row
-    .large-12.columns
-      %h2 People love this book!
-      .row
-        .large-6.columns
-          %h3 Hooked from the beginning!
-          :markdown
-            I'm not a big sci-fi reader but this story had me hooked as soon as I started reading. Matteo won my heart from the beginning & in spite of his weaknesses he is a brave little boy. He & his older brother, Jogun are surviving on their own the the slums facing hunger, and the brutal environment outside Sedonia City. I had a hard time putting this book down once I started reading. -- [Jaycare]
-        .large-6.columns
-          %h3 An absolute page turner!
-          :markdown
-            Once I started Son of Sedonia I could not put it down! The characters are well developed, the plot and story line are exceptional, the action will keep you on your toes, and the last line of the book gave me chills. A must read, even for those not usually interested in "sci-fi"! Son of Sedonia. -- [MCG]
-      .row
-        .large-12.columns
-          %h3 Absolutely Amazing Book
-          :markdown
-            I have read the other reviews and agree with all of them. I read a wide variety of books from classics to best sellers to science fiction to murder mysteries and everything in between. This book is an outstanding read regardless of whether you are into science fiction.
-
-            The character development, plot and creative writing are exceptional. What really sets this book apart is that you never get what you expect. The twists and turns exceed any mystery I have ever read. Sir Arthur Conan Doyle would be proud of Son of Sedonia's unpredictabilty. Isaac Asimov would be enthralled by the futuristic picture the author paints and how the reader can see it so vividly.
-
-            Another fantastic feature is the book's complexity. The science fiction setting and the technology is just part of that complexity. Its the multiple characters and the parts they play, the scene changes and their coloring, and most of all, the intricately woven story that pulls everything together even tho at times you wonder where is a particular part playing in the whole scheme. And the ending....
-
-            Please read this book! It is quite possibly the best book I have read in at least 10 years. My only wish is if there was a way to get these reviews read by many more people so they will read it and have the opportunity to be mesmerized. I will try social media outlets but this needs someone in big book review shoes to put the word out. _-- [Kari A. Newquist]_
+                This book is the result.
